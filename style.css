@@ -1,0 +1,410 @@
+:root {
+  --purple: hsl(256, 67%, 59%);
+  --light-purple: hsl(254, 88%, 90%);
+  --yellow: hsl(39, 100%, 71%);
+  --light-yellow: hsl(31, 66%, 93%);
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 96%);
+  --black: hsl(0, 0%, 7%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  color: var(--black);
+  background-color: var(--off-white);
+  padding-top: 2.5rem;
+}
+
+.bento-container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: "item7 item1 item1 item4" ". item2 item3 item4" "item8 item6 item5 item5";
+  grid-template-columns: repeat(4, 16rem);
+  gap: 2rem 2rem;
+  max-width: 70rem;
+}
+
+.bento-item {
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  overflow: hidden;
+}
+
+.item1 {
+  grid-area: item1;
+  max-height: 20.25rem;
+  background-color: var(--purple);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 3rem;
+}
+
+.item1 h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.item1 p {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.item1 span {
+  color: var(--yellow);
+  font-size: 3.5rem;
+}
+
+.item1 i {
+  font-size: 3.5rem;
+}
+
+.item1 img {
+  width: 11.5rem;
+}
+
+.item2 {
+  grid-area: item2;
+  background-color: var(--white);
+}
+
+.item2 img {
+  width: 18rem;
+  /* background-color: var(--white); */
+  filter: drop-shadow(-4px 4px 4px var(--off-white));
+  border-radius: 40px;
+  /* box-shadow: inset 4px 4px 4px 4px var(--yellow); */
+  margin-bottom: 1.25rem;
+}
+
+.item3 {
+  grid-area: item3;
+  background-color: var(--yellow);
+  max-height: 15.5rem;
+}
+
+.item3 img {
+  width: 100%;
+  margin-top: 1.25rem;
+}
+
+.item4 {
+  grid-area: item4;
+  max-height: 37.75rem;
+  background-color: var(--light-purple);
+  padding-top: 3rem;
+  padding-left: 2rem;
+}
+
+.item4 img {
+  width: 180%;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.item5 {
+  grid-area: item5;
+  max-height: 15.5rem;
+  background-color: var(--purple);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item5 h2 {
+  letter-spacing: normal;
+}
+
+.item5 img {
+  height: 12.5rem;
+}
+
+.item6 {
+  grid-area: item6;
+  max-height: 15.5rem;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item6 h1 {
+  margin-bottom: 1rem;
+}
+
+.item6 p {
+  margin-bottom: 2.25rem;
+}
+
+.item6 img {
+  width: 11.25rem;
+}
+
+.item7 {
+  grid-area: item7;
+  background-color: var(--light-yellow);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  margin-bottom: -5.75rem;
+}
+
+.item7 h2 {
+  margin-bottom: 1rem;
+}
+
+.item7 i {
+  color: var(--purple);
+  font-size: 2.5rem;
+}
+
+.item7 img {
+  width: 11.875rem;
+}
+
+.item8 {
+  grid-area: item8;
+  background-color: var(--yellow);
+  margin-top: -11.75rem;
+  padding-right: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item8 h2 {
+  margin-right: 1.5rem;
+}
+.item8 img {
+  width: 100%;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 500;
+  line-height: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: -1.5px;
+  line-height: 2.25rem;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: -1px;
+  line-height: 1.75rem;
+}
+
+.attribution {
+  margin-top: 2.5rem;
+  text-align: center;
+  font-size: 0.5rem;
+}
+
+.attribution a {
+  color: var(--purple);
+  font-size: 0.5rem;
+}
+
+@media screen and (max-width: 1176px) {
+  .bento-container {
+    grid-template-areas: "item1 item1 item4" "item2 item3 item4" "item6 item5 item5" "item8 item8 item7";
+    grid-template-columns: repeat(3, 16rem);
+    max-width: 52rem;
+  }
+
+  .item7 {
+    margin-bottom: 0;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    max-height: 15.5rem;
+  }
+
+  .item7 h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: -1px;
+    line-height: 1.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .item7 i {
+    font-size: 2rem;
+  }
+
+  .item7 img {
+    width: 80%;
+  }
+
+  .item8 {
+    margin-top: 0;
+    padding-right: 1.5rem;
+    max-height: 15.5rem;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .item8 img {
+    max-width: 40%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  * {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 744px) {
+  /* * {
+    font-size: 16px;
+  } */
+
+  .bento-container {
+    grid-template-areas: "item1" "item2" "item3" "item4" "item5" "item6" "item7" "item8";
+    grid-template-columns: 24.5rem;
+    justify-content: center;
+  }
+
+  .bento-item {
+    border-radius: 0.6rem;
+    padding: 1rem ;
+  }
+
+  .item1 {
+    padding: 2.75rem;
+    max-height: none;
+  }
+  .item1 h1 {
+    margin-bottom: 1.75rem;
+  }
+
+  .item1 span,
+  .item1 i {
+    font-size: 3rem;
+  }
+
+  .item1 img {
+    width: 13.5rem;
+  }
+
+  .item2 img {
+    width: 100%;
+  }
+
+  .item3 img {
+    width: 68%;
+  }
+
+  .item4 {
+    text-align: center;
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .item4 img {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .item4 p {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .item5 {
+    flex-direction: column;
+    max-height: none;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .item5 img {
+    height: auto;
+    width: 16.3rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .item5 h2 {
+    text-align: center;
+    letter-spacing: -1px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .item6 {
+    padding: 1.7rem;
+  }
+
+  .item6 p {
+    margin-bottom: 1.5rem;
+  }
+
+  .item6 img {
+    width: 12.8rem;
+  }
+
+  .item7 {
+    padding: 2.3rem;
+    max-height: none;
+  }
+
+  .item7 h2 {
+    margin-bottom: 1.75rem;
+  }
+
+  .item7 img {
+    width: 13.7rem;
+  }
+
+  .item8 {
+    flex-direction: column;
+    align-items: flex-start;
+    max-height: none;
+    padding: 1.7rem;
+  }
+
+  .item8 img {
+    max-width: none;
+    width: 15.7rem;
+    margin-top: 1.2rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+  h2 {
+    font-size: 2.3rem;
+
+  }
+
+  h3 {
+    font-size: 1.8rem;
+    line-height: 1.6rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+}
